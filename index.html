@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미니 야구게임</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="game">
+    <h1>⚾ 미니 야구게임</h1>
+    <p class="sub">공이 오면 타격을 선택하세요!</p>
+
+    <section class="scoreboard">
+      <div class="stat">
+        <span>점수</span>
+        <strong id="score">0</strong>
+      </div>
+      <div class="stat">
+        <span>스트라이크</span>
+        <strong id="strikes">0</strong>
+      </div>
+      <div class="stat">
+        <span>아웃</span>
+        <strong id="outs">0</strong>
+      </div>
+    </section>
+
+    <div class="field">
+      <div class="diamond"></div>
+      <div class="pitcher">⚾</div>
+      <div class="ball" id="ball">●</div>
+    </div>
+
+    <div class="message" id="message">타격 버튼을 눌러 시작하세요!</div>
+
+    <div class="choices">
+      <button onclick="swing('contact')">컨택 스윙</button>
+      <button onclick="swing('power')">파워 스윙</button>
+      <button onclick="swing('safe')">안전 스윙</button>
+    </div>
+
+    <button class="restart" onclick="restart()">게임 다시 시작</button>
+
+    <div class="hint">
+      컨택: 안타 확률 ↑ · 파워: 홈런 확률 ↑ · 안전: 삼진 위험 ↓
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
